@@ -2,13 +2,15 @@ goos: linux
 goarch: amd64
 pkg: github.com/cezarguimaraes/bla
 cpu: 12th Gen Intel(R) Core(TM) i7-12700KF
-Benchmark_MapRefPreAlloc_BigStruct10x-20    	   60208	     19142 ns/op	   65712 B/op	    1001 allocs/op
-Benchmark_MapRefPreAlloc_BigStruct-20       	   61520	     19121 ns/op	   64514 B/op	    1001 allocs/op
-Benchmark_MapRef_BigStruct10x-20            	   46417	     25380 ns/op	  100140 B/op	    1012 allocs/op
-Benchmark_MapRef_BigStruct-20               	   47469	     25318 ns/op	   98585 B/op	    1012 allocs/op
-Benchmark_gMapPreAlloc_BigStruct10x-20      	     229	   5127144 ns/op	  413742 B/op	    1001 allocs/op
-Benchmark_gMapPreAlloc_BigStruct-20         	    6122	    206151 ns/op	   65691 B/op	    1001 allocs/op
-Benchmark_gMap_BigStruct10x-20              	     225	   5150507 ns/op	  453985 B/op	    1012 allocs/op
-Benchmark_gMap_BigStruct-20                 	    5601	    196540 ns/op	   99845 B/op	    1012 allocs/op
+Benchmark_Map3_BigStruct10x-20              	   57307	     19038 ns/op	   65780 B/op	    1001 allocs/op
+Benchmark_Map2_BigStruct10x-20              	   57409	     18999 ns/op	   65777 B/op	    1001 allocs/op
+Benchmark_MapRefPreAlloc_BigStruct10x-20    	   58188	     18914 ns/op	   65758 B/op	    1001 allocs/op
+Benchmark_MapRefPreAlloc_BigStruct-20       	   62665	     19186 ns/op	   64511 B/op	    1001 allocs/op
+Benchmark_MapRef_BigStruct10x-20            	   46530	     25108 ns/op	  100135 B/op	    1012 allocs/op
+Benchmark_MapRef_BigStruct-20               	   47163	     24908 ns/op	   98586 B/op	    1012 allocs/op
+Benchmark_gMapPreAlloc_BigStruct10x-20      	     259	   4728079 ns/op	  373276 B/op	    1001 allocs/op
+Benchmark_gMapPreAlloc_BigStruct-20         	    5930	    200206 ns/op	   65733 B/op	    1001 allocs/op
+Benchmark_gMap_BigStruct10x-20              	     237	   4806597 ns/op	  435981 B/op	    1012 allocs/op
+Benchmark_gMap_BigStruct-20                 	    6391	    210963 ns/op	   99668 B/op	    1012 allocs/op
 PASS
-ok  	github.com/cezarguimaraes/bla	12.949s
+ok  	github.com/cezarguimaraes/bla	13.882s
