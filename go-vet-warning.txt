@@ -1,0 +1,2 @@
+# github.com/cezarguimaraes/bla
+./main.go:56:42: func passes lock by value: github.com/cezarguimaraes/bla.NoCopyElement contains sync.Mutex

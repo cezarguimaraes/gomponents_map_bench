@@ -1,11 +1,15 @@
 package main
 
 import (
+	"fmt"
 	"os"
+	"sync"
+	"unsafe"
 
 	g "github.com/maragudk/gomponents"
 )
 
+// performance issue
 type BigStruct struct {
 	vals [1000]int
 }
@@ -42,7 +46,21 @@ func render[T any](b T) g.Node {
 	return g.El("a")
 }
 
+// noCopy issue
+type NoCopyElement struct {
+	mu sync.Mutex
+}
+
 func main() {
 	var foo BigStruct
+	fmt.Println(unsafe.Sizeof(foo))
 	render(foo).Render(os.Stdout)
+
+	g.Map(make([]NoCopyElement, 10), func(_ NoCopyElement) g.Node {
+		return g.El("p")
+	})
+
+	MapRef(make([]NoCopyElement, 10), func(_ *NoCopyElement) g.Node {
+		return g.El("p")
+	})
 }
